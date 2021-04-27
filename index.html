@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="app.js"></script>
+    <title>Calc Verdansk</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+    <div class="calculadora">
+        <div class="display-container">
+            <p class="hist" id="hist"></p>
+            <p class="op" id=op></p>
+            <input maxlength="5" class="display" id="display" value="0" disabled>
+        </div>
+        <table>
+            <tr>
+                <td><button class="button" onclick="limpar(); limparhist(); limparvar();">c</button></td>
+                <td><button class="button" onclick="bc()">bc</button></td>
+                <td><button class="button" onclick="dividir()">/</button></td>
+                <td><button class="button" onclick="somar()">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="numero(7)">7</button></td>
+                <td><button class="button" onclick="numero(8)">8</button></td>
+                <td><button class="button" onclick="numero(9)">9</button></td>
+                <td><button class="button" onclick="multiplicar()">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="numero(4)">4</button></td>
+                <td><button class="button" onclick="numero(5)">5</button></td>
+                <td><button class="button" onclick="numero(6)">6</button></td>
+                <td><button class="button" onclick="subtrair()">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="numero(1)">1</button></td>
+                <td><button class="button" onclick="numero(2)">2</button></td>
+                <td><button class="button" onclick="numero(3)">3</button></td>
+                <td rowspan = "2"><button class="button" style="height: 146px;" onclick="result()">=</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="sinal()">+/-</button></td>
+                <td><button class="button" onclick="numero(0)">0</button></td>
+                <td><button class="button" onclick="ponto()">.</button></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="localstorage">
+        <label for="">Ultima Operação: </label><br><br>
+        <label id="val1"></label> 
+        <label id="operation"></label> 
+        <label id="val2"></label> 
+        <label id="igual"></label> 
+        <label id="valfinal"></label> 
+    </div>
+</body>
+</html>
